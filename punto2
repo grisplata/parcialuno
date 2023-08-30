@@ -1,0 +1,52 @@
+class Stack{
+  constructor() {
+    this.elementos = [];
+  }
+
+  push(elemento) {
+    this.elementos.push(elemento);
+    return this.stack}
+  
+
+  pop() {
+    return this.elementos.pop();
+  }
+
+  peek() {
+    return this.elementos[this.elementos.length - 1];
+  }
+
+  size() {
+    return this.elementos.length;  }
+  
+
+  print() {
+    console.log(this.elementos);
+  }}
+
+
+
+const stack1 = new Stack(); // similar al anterior punto, ahora "colita" es "stack1" y "cola" es "stack"
+stack1.push(2.2);
+stack1.push(3.4);
+stack1.push(4.9);
+stack1.push(5.9);
+
+
+function reversar_stack1(stack) {
+  const elementos = stack.elementos.slice(); //copiar
+  const stack1_invertida = elementos.reverse(); // reversar copiados
+
+  const stackInvertida = new Stack();
+
+  for (i=0;i<stack1_invertida.length;i++) // metemos los elementos reversados en stackInvertida
+  { 
+    var elemento = stack1_invertida[i];
+    stackInvertida.push(elemento);  
+      
+  }  
+
+  return stackInvertida;}
+
+const stack1Invertida = reversar_stack1(stack1);
+console.log(stack1Invertida.print());
