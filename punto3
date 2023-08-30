@@ -70,10 +70,10 @@ class LinkedList {
 
 
 const lista1 = new LinkedList();
-list1.append(1);
-list1.append(3);
-list1.append(5);
+lista1.append(1);
+lista1.append(3);
+lista1.append(5);
 const lista2 = new LinkedList();
-list2.append(2);
-list2.append(4);
-list2.append(6);
+lista2.append(2);
+lista2.append(4);
+lista2.append(6);
