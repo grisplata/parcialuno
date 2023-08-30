@@ -70,10 +70,5 @@ class LinkedList {
 
 
 const lista1 = new LinkedList();
-lista1.append(1);
-lista1.append(3);
-lista1.append(5);
+
 const lista2 = new LinkedList();
-lista2.append(2);
-lista2.append(4);
-lista2.append(6);
