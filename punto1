@@ -1,0 +1,55 @@
+class Cola{
+  constructor() {
+    this.elementos = [];
+  }
+
+  enqueue(elemento) {
+    this.elementos.push(elemento);}
+  
+
+  dequeue() {
+    return this.elementos.shift();
+  }
+
+  peek() {
+    return this.elementos[0];
+  }
+
+  size() {
+    return this.elementos.length;  }
+  
+
+  isEmpty() {
+    return this.elementos.length === 0;
+      }
+
+  print() {
+    return this.elementos;
+  }}
+
+
+
+const colita = new Cola();
+colita.enqueue(2.2);
+colita.enqueue(3.4);
+colita.enqueue(4.9);
+colita.enqueue(5.9);
+
+
+function reversar_colita(cola) {
+  const elementos = cola.elementos.slice(); //copiar
+  const colita_invertida = elementos.reverse(); // reversar copiados
+
+  const colaInvertida = new Cola();
+
+  for (i=0;i<colita_invertida.length;i++) // metemos los elementos reversados en colaInvertida
+  { 
+    var elemento = colita_invertida[i];
+    colaInvertida.enqueue(elemento);  
+      
+  }  
+
+  return colaInvertida;}
+
+const colitaInvertida = reversar_colita(colita);
+console.log(colitaInvertida.print());
